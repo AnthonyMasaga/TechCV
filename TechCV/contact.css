@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 80px;
+  background: rgb(224, 206, 241);
+  font-family: montserrat;
+}
+nav {
+  background: darkslategray;
+  width: 100%;
+  height: 80px;
+}
+label.logo {
+  color: rgb(53, 44, 44);
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+
+  margin-top: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: rgb(53, 44, 44);
+  font-size: 17px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+a.active,
+a:hover {
+  background: wheat;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: rgb(53, 44, 44);
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    padding-left: 50px;
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: none;
+    left: -100px;
+    top: 80px;
+    text-align: center;
+    transition: all -5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: wheat;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+section {
+  background: url(R.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+.contactInfo {
+  position: relative;
+  width: 30%;
+
+  margin: 50px;
+  display: -ms-inline-grid;
+  grid-template-columns: 1fr 3fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0, 1);
+}
+.Languages {
+  position: relative;
+  width: 30%;
+
+  margin: 50px;
+  display: -ms-inline-grid;
+  grid-template-columns: 1fr 3fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0, 1);
+}
+.Languages .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: rgb(7, 28, 68);
+  display: block;
+  margin-top: 5px;
+}
+.Languages .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: mediumaquamarine;
+}
+.Interests {
+  position: relative;
+  width: 30%;
+
+  margin: 50px;
+  display: -ms-inline-grid;
+  grid-template-columns: 1fr 3fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0, 1);
+}
+.Interests ul {
+  display: -ms-inline-grid;
+}
+.Interests ul li {
+  list-style: none;
+  color: #333;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.Interests ul li .fa {
+  color: #03a9f4;
+  font-size: 18px;
+  width: 20px;
+}
